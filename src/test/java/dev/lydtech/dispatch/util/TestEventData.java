@@ -1,7 +1,7 @@
 package dev.lydtech.dispatch.util;
 
+import dev.lydtech.dispatch.message.DispatchPrepared;
 import dev.lydtech.dispatch.message.OrderCreated;
-
 import java.util.UUID;
 
 public class TestEventData {
@@ -11,5 +11,11 @@ public class TestEventData {
             .orderId(orderId)
             .item(item)
             .build();
+    }
+
+    public static DispatchPrepared dispatchPreparedEvent(UUID orderId){
+        return DispatchPrepared.builder()
+                .orderId(orderId)
+                .build();
     }
 }

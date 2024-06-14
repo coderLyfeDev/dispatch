@@ -16,14 +16,15 @@ public class DispatchService {
     private final KafkaTemplate<String,Object> kafkaProducer;
 
     public void process(OrderCreated orderCreated) throws Exception{
+
+        DispatchPrepared dispatchPrepared = DispatchPrepared.builder()
+                .orderId(orderCreated.getOrderId())
+                .build();
+        kafkaProducer.send(DISPATCH_TRACKING_TOPIC, dispatchPrepared).get();
+
         OrderDispatched orderDispatched = OrderDispatched.builder()
                 .orderId(orderCreated.getOrderId())
                 .build();
         kafkaProducer.send(ORDER_DISPATCHED_TOPIC, orderDispatched).get();
-    }
-
-    public void processTrackingStatus(DispatchPrepared dispatchPrepared) throws Exception{
-
-        kafkaProducer.send(DISPATCH_TRACKING_TOPIC, dispatchPrepared).get();
     }
 }
