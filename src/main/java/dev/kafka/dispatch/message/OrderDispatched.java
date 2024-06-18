@@ -1,4 +1,4 @@
-package dev.lydtech.dispatch.message;
+package dev.kafka.dispatch.message;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;

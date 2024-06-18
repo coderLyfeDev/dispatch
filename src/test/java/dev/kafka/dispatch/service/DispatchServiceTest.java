@@ -1,9 +1,9 @@
-package dev.lydtech.dispatch.service;
+package dev.kafka.dispatch.service;
 
-import dev.lydtech.dispatch.message.DispatchPrepared;
-import dev.lydtech.dispatch.message.OrderCreated;
-import dev.lydtech.dispatch.message.OrderDispatched;
-import dev.lydtech.dispatch.util.TestEventData;
+import dev.kafka.dispatch.message.DispatchPrepared;
+import dev.kafka.dispatch.message.OrderCreated;
+import dev.kafka.dispatch.message.OrderDispatched;
+import dev.kafka.dispatch.util.TestEventData;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import org.mockito.ArgumentMatchers;

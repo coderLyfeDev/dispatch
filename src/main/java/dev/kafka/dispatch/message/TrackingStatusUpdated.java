@@ -1,4 +1,4 @@
-package dev.lydtech.dispatch.message;
+package dev.kafka.dispatch.message;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -8,9 +8,10 @@ import lombok.NoArgsConstructor;
 import java.util.UUID;
 
 @Data
-@NoArgsConstructor
 @AllArgsConstructor
+@NoArgsConstructor
 @Builder
-public class DispatchPrepared {
-    UUID orderId;
+public class TrackingStatusUpdated {
+    UUID orderID;
+    String status;
 }

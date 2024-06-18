@@ -1,8 +1,8 @@
-package dev.lydtech.dispatch.handler;
+package dev.kafka.dispatch.handler;
 
-import dev.lydtech.dispatch.message.OrderCreated;
-import dev.lydtech.dispatch.service.DispatchService;
-import dev.lydtech.dispatch.util.TestEventData;
+import dev.kafka.dispatch.service.DispatchService;
+import dev.kafka.dispatch.message.OrderCreated;
+import dev.kafka.dispatch.util.TestEventData;
 import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.Test;
 import static java.util.UUID.randomUUID;

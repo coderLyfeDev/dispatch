@@ -1,7 +1,7 @@
-package dev.lydtech.dispatch.util;
+package dev.kafka.dispatch.util;
 
-import dev.lydtech.dispatch.message.DispatchPrepared;
-import dev.lydtech.dispatch.message.OrderCreated;
+import dev.kafka.dispatch.message.DispatchPrepared;
+import dev.kafka.dispatch.message.OrderCreated;
 import java.util.UUID;
 
 public class TestEventData {

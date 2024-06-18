@@ -1,6 +1,6 @@
-package dev.lydtech.dispatch;
+package dev.kafka.dispatch;
 
-import dev.lydtech.dispatch.message.OrderCreated;
+import dev.kafka.dispatch.message.OrderCreated;
 import org.apache.kafka.clients.consumer.ConsumerConfig;
 import org.apache.kafka.clients.producer.ProducerConfig;
 import org.apache.kafka.common.serialization.StringDeserializer;
@@ -18,7 +18,7 @@ import org.springframework.kafka.support.serializer.JsonSerializer;
 import java.util.HashMap;
 import java.util.Map;
 
-@ComponentScan(basePackages = {"dev.lydtech"})
+@ComponentScan(basePackages = {"dev.kafka"})
 @Configuration
 public class DispatchConfiguration {
 

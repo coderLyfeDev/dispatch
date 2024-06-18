@@ -1,4 +1,4 @@
-package dev.lydtech.dispatch;
+package dev.kafka.dispatch;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;

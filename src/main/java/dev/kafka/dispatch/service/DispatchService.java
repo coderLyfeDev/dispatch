@@ -1,8 +1,8 @@
-package dev.lydtech.dispatch.service;
+package dev.kafka.dispatch.service;
 
-import dev.lydtech.dispatch.message.DispatchPrepared;
-import dev.lydtech.dispatch.message.OrderCreated;
-import dev.lydtech.dispatch.message.OrderDispatched;
+import dev.kafka.dispatch.message.DispatchPrepared;
+import dev.kafka.dispatch.message.OrderCreated;
+import dev.kafka.dispatch.message.OrderDispatched;
 import lombok.RequiredArgsConstructor;
 import org.springframework.kafka.core.KafkaTemplate;
 import org.springframework.stereotype.Service;
