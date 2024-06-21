@@ -39,6 +39,7 @@ public class DispatchConfiguration {
         config.put(ErrorHandlingDeserializer.VALUE_DESERIALIZER_CLASS, JsonDeserializer.class);
         config.put(ConsumerConfig.KEY_DESERIALIZER_CLASS_CONFIG, StringDeserializer.class);
         config.put(JsonDeserializer.TRUSTED_PACKAGES, TRUSTED_PACKAGES);
+        config.put(JsonDeserializer.VALUE_DEFAULT_TYPE, "dev.kafka.dispatch.message.OrderCreated"); // Set default type
         return new DefaultKafkaConsumerFactory<>(config);
 
     }
