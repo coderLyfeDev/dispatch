@@ -1,5 +1,7 @@
 package dev.kafka.dispatch.handler;
 
+import dev.kafka.dispatch.exception.NotRetryableException;
+import dev.kafka.dispatch.exception.RetryableException;
 import dev.kafka.dispatch.message.OrderCreated;
 import dev.kafka.dispatch.service.DispatchService;
 import lombok.RequiredArgsConstructor;
@@ -27,8 +29,12 @@ public class OrderCreatedHandler {
         log.info("received message: partition: "+ partition + " - key: "+key+" - payload: "+ payload);
         try {
             dispatchService.process(key, payload);
+        } catch(RetryableException e){
+            log.warn("Retryable exception: " + e.getMessage());
+            throw e;
         } catch(Exception e){
-            log.error("Processing failure", e);
+            log.error("NotRetryable Exception" + e.getMessage());
+            throw new NotRetryableException(e);
         }
     }
 }
